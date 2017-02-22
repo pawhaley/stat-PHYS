@@ -1,0 +1,11 @@
+>> x=[0:50];
+>> p=factorial(50)./(factorial(x).*factorial(50-x).*2^50);
+>> plot(x,p)
+>> warning: print.m: epstool binary is not available.
+Some output formats are not available.
+warning: called from
+    __print_parse_opts__ at line 382 column 9
+    print at line 291 column 8
+warning: print.m: fig2dev binary is not available.
+Some output formats are not available.
+diary off

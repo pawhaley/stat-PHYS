@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.6)  1 MAR 2017 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.6)  1 MAR 2017 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,57 +559,28 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 87.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-)
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
- []
-
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) (../octave/d1.txt
-LaTeX Font Info:    Try loading font information for OML+pcr on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlpcr.fd
-File: omlpcr.fd 
-)
-LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 2.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))
-<../octave/f1.pdf, id=1, 614.295pt x 794.97pt>
-File: ../octave/f1.pdf Graphic file (type pdf)
- <use ../octave/f1.pdf>
-Package pdftex.def Info: ../octave/f1.pdf used on input line 101.
-(pdftex.def)             Requested size: 215.00647pt x 278.24367pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
- <../octave/f1.pdf>] [2] (./doc.aux) ) 
+] [2] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 5895 strings out of 494910
- 79308 string characters out of 6179837
- 149687 words of memory out of 5000000
- 9058 multiletter control sequences out of 15000+600000
- 33455 words of font info for 92 fonts, out of 8000000 for 9000
+ 5709 strings out of 494910
+ 76913 string characters out of 6179837
+ 147687 words of memory out of 5000000
+ 8892 multiletter control sequences out of 15000+600000
+ 21188 words of font info for 56 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,11n,43p,442b,1342s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+ 38i,11n,43p,400b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+/usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doc.pdf (2 pages, 63441 bytes).
+Output written on doc.pdf (2 pages, 43076 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

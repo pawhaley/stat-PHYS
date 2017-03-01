@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[bw,framed,numbered]{mcode}
+\usepackage{graphicx}
+
+% Comment the following line to use TeX's default font of Computer Modern.
+\usepackage{times,txfonts}
+
+\newtheoremstyle{homework}% name of the style to be used
+  {18pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {2ex}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+\theoremstyle{homework} 
+
+% Set up an Exercise environment and a Solution label.
+\newtheorem*{exercisecore}{Exercise \@currentlabel}
+\newenvironment{exercise}[1]
+{\def\@currentlabel{#1}\exercisecore}
+{\endexercisecore}
+
+\newcommand{\localhead}[1]{\par\smallskip\noindent\textbf{#1}\nobreak\\}%
+\newcommand\solution{\localhead{Solution:}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Stuff for getting the name/document date/title across the header
+\makeatletter
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[C]{\ifx\@docdate\@empty\else\@docdate\fi}
+\fancyhead[R]{\ifx\@docauthor\@empty\else\@docauthor\fi}
+\headheight 15pt
+
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\doclabel{Use {\tt\textbackslash doclabel\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\docauthor#1{\gdef\@docauthor{#1}}
+\docauthor{Use {\tt\textbackslash docauthor\{MY NAME\}}.}
+\makeatother
+
+% Shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\Reals}{\ensuremath{\mathbb R}}
+\newcommand{\Nats}{\ensuremath{\mathbb N}}
+\newcommand{\Ints}{\ensuremath{\mathbb Z}}
+\newcommand{\Rats}{\ensuremath{\mathbb Q}}
+\newcommand{\Cplx}{\ensuremath{\mathbb C}}
+%% Some equivalents that some people may prefer.
+\let\RR\Reals
+\let\NN\Nats
+\let\II\Ints
+\let\CC\Cplx
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+\doclabel{STAT PHYS: Homework 3}
+\docauthor{Parker Whaley}
+\docdate{Feb 22, 2017}
+%\lstinputlisting{../octave/d1.txt}
+\newcommand{\vv}{\mathbf{v}}
+\begin{document}
+\begin{exercise}{2.24}
+\begin{enumerate}[(a)]
+\item
+Recall that the multiplicity for a two state paramagnet is $\Omega(N,N_\uparrow )=\frac{N!}{N_\uparrow ! (N-N_\uparrow)!}$.    Applying Sterling's approximation of $A!=\sqrt{2\pi}\sqrt{A}(A/e)^A$ we get
+$$\Omega(N,N_\uparrow )=\frac{N!}{N_\uparrow ! (N-N_\uparrow)!}\approx\sqrt{\frac{N}{2\pi N_\uparrow  (N-N_\uparrow)}} \frac{(N/e)^N}{(N_\uparrow/e)^{N_\uparrow} ((N-N_\uparrow)/e)^{(N-N_\uparrow)}}$$
+$$=\sqrt{\frac{N}{2\pi N_\uparrow  (N-N_\uparrow)}}\biggr(\frac{N}{N-N_\uparrow}\biggr)^N \biggr(\frac{N-N_\uparrow}{N_\uparrow}\biggr)^{N\uparrow} $$
+$$\text{leting }N_\uparrow=N/2$$
+$$=\sqrt{\frac{N}{2\pi N/2  N/2}}\biggr(\frac{N}{N/2}\biggr)^N \biggr(\frac{N/2}{N/2}\biggr)^{N/2}$$
+$$=\sqrt{\frac{2}{\pi N}}2^N$$
+\item
+$$\Omega(N,N_\uparrow )\approx\sqrt{\frac{N}{2\pi N_\uparrow  (N-N_\uparrow)}}\biggr(\frac{N}{N-N_\uparrow}\biggr)^N \biggr(\frac{N-N_\uparrow}{N_\uparrow}\biggr)^{N\uparrow} $$
+$$\text{leting }N_\uparrow=N/2+x$$
+$$\Omega(N,N_\uparrow )\approx\sqrt{\frac{N}{2\pi (N/2+x)  (N/2-x)}}\biggr(\frac{N}{N/2-x}\biggr)^N \biggr(\frac{N/2-x}{N/2+x}\biggr)^{N/2+x} $$
+$$=\sqrt{\frac{N}{2\pi (N/2+x)  (N/2-x)}}\biggr(\frac{N}{N/2-x}\biggr)^N \biggr(\frac{\sqrt{N/2-x}}{\sqrt{N/2+x}}\biggr)^{N} \biggr(\frac{N/2-x}{N/2+x}\biggr)^{x} $$
+$$=\sqrt{\frac{N}{2\pi (N/2+x)  (N/2-x)}}\biggr(\frac{N}{\sqrt{N/2-x}\sqrt{N/2+x}}\biggr)^N  \biggr(\frac{N/2-x}{N/2+x}\biggr)^{x} $$
+If $x=0$ this approximation becomes
+$$\sqrt{\frac{N}{2\pi (N/2)  (N/2)}}\biggr(\frac{N}{\sqrt{N/2}\sqrt{N/2}}\biggr)^N =\sqrt{\frac{2}{\pi N}}2^N$$
+\item
+$$\sqrt{\frac{N}{2\pi (N/2+x)  (N/2-x)}}\biggr(\frac{N}{\sqrt{N/2-x}\sqrt{N/2+x}}\biggr)^N  \biggr(\frac{N/2-x}{N/2+x}\biggr)^{x} $$
+\item
+I would not be surprised to find off by $1000$ as the multiplicity of that result is similar to the peak however I would be surprised to find off by $10000$ as that multiplicity is several orders of magnitude less than the peak
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{2.29}
+The highest entropy corresponds to the highest $\Omega_{\text{total}}$ and we can see from table 2.5 that this occurs when $q_A=60$ and corresponds to a entropy of $k264$.  The lowest entropy would likewise occur at $q_A=0$ and is $k187$.  Over long time scales the time spent far away from the peak are completely negligible thus the average entropy will be $\approx k264$.
+\end{exercise}
+
+\begin{exercise}{2.41}
+\begin{enumerate}
+\item
+Melting ice - The room will cool down and decrease in entropy but the ice will melt and, by coming out of a crystal, have a huge increase in entropy.
+\item
+Heat transfer across a rod - If one end of a rod is heated up the heat will disperse across the rod.  The end that cools looses some entropy, but the end that eventually receives the heat will drastically increase in entropy
+\item
+Breaking - Breaking a car will transfer low entropy energy, in the form of velocity to heat on the break pads, a very high entropy energy.
+\end{enumerate}
+\end{exercise}
+
+
+
+
+\end{document}
